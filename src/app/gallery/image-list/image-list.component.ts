@@ -1,15 +1,19 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {Image} from '../../models/image';
+import {ImageService} from '../../services/image.service';
+
 @Component({
   selector: 'ng-image-list',
   templateUrl: './image-list.component.html',
   styles: []
 })
 export class ImageListComponent implements OnInit {
- image = new Image('1','1','descripcion','https://www.walldevil.com/wallpapers/a21/thumb/computer-hacking-wallpapers-hackaday-change.jpg','https://www.walldevil.com/wallpapers/a21/thumb/computer-hacking-wallpapers-hackaday-change.jpg');
-  constructor() { }
+images : Image[] =[];
+ 
+  constructor(private imageService:ImageService) { }
 
   ngOnInit() {
+    this.images = this.imageService.getImages();
   }
 
 }
