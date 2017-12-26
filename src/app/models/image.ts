@@ -1,4 +1,10 @@
 export class Image {
-                   
-	contructor(public id:string,public title:string,public description:string,public thumbnail:string,public imageLink:string){	}
+	constructor( 
+        public id:string,
+        public title:string,
+        public description:string,
+        public thumbnail:string,
+        public imagelink:string){
+		
+	}
 }
