@@ -18,5 +18,4 @@ selectedImage: Image;
   onSelect(image: Image){
     this.selectedImage = image;
   }
-
 }

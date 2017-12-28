@@ -6,7 +6,7 @@ import {Image} from '../../models/image';
   styleUrls: ['./image-detail.component.css']
 })
 export class ImageDetailComponent implements OnInit {
-
+    @Input() selectedImage : Image;
   constructor() { }
 
   ngOnInit() {
